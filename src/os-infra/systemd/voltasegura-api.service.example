@@ -1,0 +1,21 @@
+# MODELO: nao instalado automaticamente. Ajustar DLL e runtime conforme o backend real.
+[Unit]
+Description=API ASP.NET Core VoltaSegura
+After=network.target
+
+[Service]
+WorkingDirectory=/opt/voltasegura/api
+ExecStart=/usr/bin/dotnet /opt/voltasegura/api/NOME_REAL_DA_API.dll
+User=voltasegura-api
+Group=voltasegura-api
+Environment=ASPNETCORE_URLS=http://127.0.0.1:5000
+Environment=ASPNETCORE_ENVIRONMENT=Production
+EnvironmentFile=/etc/voltasegura/api.env
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=yes
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

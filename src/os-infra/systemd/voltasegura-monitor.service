@@ -1,0 +1,22 @@
+[Unit]
+Description=Monitor de CPU memoria e disco VoltaSegura
+After=local-fs.target
+StartLimitIntervalSec=60
+StartLimitBurst=5
+
+[Service]
+Type=simple
+DynamicUser=yes
+EnvironmentFile=/etc/voltasegura/monitor.env
+ExecStart=/usr/local/bin/voltasegura-monitor.sh
+Restart=on-failure
+RestartSec=3
+StandardOutput=journal
+StandardError=journal
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+
+[Install]
+WantedBy=multi-user.target
