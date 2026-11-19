@@ -13,7 +13,7 @@
 
 Provisionamento automatizado (Shell Script) de um ambiente Linux que hospeda a aplicação web do VoltaSegura: rede, DNS, hostname, dependências, monitoramento (CPU/disco/memória com alertas), logs de auditoria e teste de falha.
 
-> ⚠️ Em construção. Ver percurso e rubrica em [`docs/02_entregas_disciplinas.md`](../../docs/02_entregas_disciplinas.md). Vídeo de até 7 min demonstrando o provisionamento automático dentro da VM.
+> ⚠️ Video: https://youtu.be/7g7gxlB-50A da entrega
 
 ## Entregáveis
 
